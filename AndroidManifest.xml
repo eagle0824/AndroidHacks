@@ -24,6 +24,9 @@
         <activity
             android:name=".activity.CustomViewGroup"
             android:label="@string/custom_group_view" />
+        <activity
+            android:name=".activity.AnimationSwitcher"
+            android:label="@string/text_image_switcher" />
     </application>
 
 </manifest>

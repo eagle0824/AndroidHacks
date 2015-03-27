@@ -3,5 +3,8 @@
 
     <string name="app_name">AndroidHack</string>
     <string name="custom_group_view">Custom GroupView</string>
+    <string name="text_image_switcher">TextSwitcher and ImageSwitcher</string>
+    <string name="text_switch">Switch Text</string>
+    <string name="image_switch">Switch Image</string>
 
 </resources>

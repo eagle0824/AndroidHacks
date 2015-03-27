@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dip" >
+
+        <Button
+            android:id="@+id/textSwitcherBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onTextSwitch"
+            android:text="@string/text_switch" />
+
+        <TextSwitcher
+            android:id="@+id/textSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:paddingTop="20dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dip" >
+
+        <Button
+            android:id="@+id/imageSwitcherBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onImageSwitch"
+            android:paddingTop="20dip"
+            android:text="@string/image_switch" />
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

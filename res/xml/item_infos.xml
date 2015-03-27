@@ -27,5 +27,8 @@
     <item
         hack:className="com.eagle.hacks.activity.CustomViewGroup"
         hack:title="@string/custom_group_view"/>
+    <item
+        hack:className="com.eagle.hacks.activity.AnimationSwitcher"
+        hack:title="@string/text_image_switcher"/>
 
 </items>
