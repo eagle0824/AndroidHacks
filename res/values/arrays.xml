@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="datas">
+        <item>"AAAAAA"</item>
+        <item>"BBBBBB"</item>
+        <item>"CCCCCC"</item>
+        <item>"DDDDDD"</item>
+        <item>"EEEEEE"</item>
+        <item>"FFFFFF"</item>
+        <item>"HHHHHH"</item>
+        <item>"IIIIII"</item>
+        <item>"JJJJJJ"</item>
+        <item>"KKKKKK"</item>
+        <item>"LLLLLL"</item>
+        <item>"MMMMMM"</item>
+        <item>"NNNNNN"</item>
+        <item>"OOOOOO"</item>
+        <item>"PPPPPP"</item>
+        <item>"QQQQQQ"</item>
+        <item>"RRRRRR"</item>
+        <item>"SSSSSS"</item>
+        <item>"TTTTTT"</item>
+        <item>"UUUUUU"</item>
+        <item>"VVVVVV"</item>
+        <item>"WWWWWW"</item>
+        <item>"XXXXXX"</item>
+        <item>"YYYYYY"</item>
+        <item>"ZZZZZZ"</item>
+    </string-array>
+
+</resources>

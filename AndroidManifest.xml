@@ -27,6 +27,9 @@
         <activity
             android:name=".activity.AnimationSwitcher"
             android:label="@string/text_image_switcher" />
+        <activity
+            android:name=".activity.AnimationViewGroup"
+            android:label="@string/anim_viewgroup" />
     </application>
 
 </manifest>

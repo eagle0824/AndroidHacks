@@ -30,5 +30,8 @@
     <item
         hack:className="com.eagle.hacks.activity.AnimationSwitcher"
         hack:title="@string/text_image_switcher"/>
+    <item
+        hack:className="com.eagle.hacks.activity.AnimationViewGroup"
+        hack:title="@string/anim_viewgroup"/>
 
 </items>

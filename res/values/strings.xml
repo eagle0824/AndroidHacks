@@ -6,5 +6,7 @@
     <string name="text_image_switcher">TextSwitcher and ImageSwitcher</string>
     <string name="text_switch">Switch Text</string>
     <string name="image_switch">Switch Image</string>
+    <string name="anim_viewgroup">ViewGroup Animation</string>
+    <string name="diaplay">Display</string>
 
 </resources>
