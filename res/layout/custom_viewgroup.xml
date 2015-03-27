@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hack="http://schemas.android.com/apk/res/com.eagle.hacks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.eagle.hacks.view.CascadeLayout
+        android:id="@+id/cascadelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        hack:horizontalSpacing="30dip"
+        hack:verticalSpacing="20dip" >
+
+        <View
+            android:layout_width="200dip"
+            android:layout_height="300dip"
+            android:background="#ffff0000"
+            hack:layoutHorizontalSpacing="100dip"
+            hack:layoutVerticalSpacing="100dip" />
+
+        <View
+            android:layout_width="200dip"
+            android:layout_height="300dip"
+            android:background="#ff00ff00" />
+
+        <View
+            android:layout_width="200dip"
+            android:layout_height="300dip"
+            android:background="#ff0000ff" />
+    </com.eagle.hacks.view.CascadeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Item">
+        <attr name="packageName" format="string" />
+        <attr name="className" format="string" />
+        <attr name="enabled" format="boolean" />
+        <attr name="title" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CascadeLayout">
+        <attr name="verticalSpacing" format="reference|dimension" />
+        <attr name="horizontalSpacing" format="reference|dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="CascadeLayout_Layout">
+        <attr name="layoutVerticalSpacing" format="reference|dimension" />
+        <attr name="layoutHorizontalSpacing" format="reference|dimension"></attr>
+    </declare-styleable>
+
+</resources>
