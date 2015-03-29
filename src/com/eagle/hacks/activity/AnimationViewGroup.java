@@ -28,6 +28,14 @@ public class AnimationViewGroup extends BaseActivity {
         dataStrings = getResources().getStringArray(R.array.datas);
         mAdapter = new ArrayAdapter<String>(this, com.android.internal.R.layout.simple_list_item_1,
                 dataStrings);
+        initListDatas();
+    }
+
+    public void onRefreshClick(View view) {
+        mHandler.sendEmptyMessage(2);
+    }
+
+    private void initListDatas() {
         mList.setAdapter(mAdapter);
         AnimationSet set = new AnimationSet(true);
         Animation animation = new AlphaAnimation(0.0f, 1.0f);
@@ -40,21 +48,15 @@ public class AnimationViewGroup extends BaseActivity {
         set.addAnimation(animation);
 
         LayoutAnimationController controller = new LayoutAnimationController(
-                set, 0.5f);
+                set, 0.8f);
         mList.setLayoutAnimation(controller);
-
-    }
-
-    public void onDisplayClick(View view) {
-        mHandler.sendEmptyMessage(2);
     }
 
     private Handler mHandler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {
-            mList.setAdapter(null);
-            mList.setAdapter(mAdapter);
+            initListDatas();
         }
 
     };

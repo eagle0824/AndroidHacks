@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hack="http://schemas.android.com/apk/res/com.eagle.hacks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.eagle.hacks.view.LedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/time_bg"
+        android:textColor="#3300ff00"
+        android:textSize="80sp" />
+
+    <com.eagle.hacks.view.LedTextView
+        android:id="@+id/led_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        hack:fontBackground="true"
+        hack:fontBackgroundColor="#33003300"
+        android:shadowColor="#00FF00"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="40"
+        android:text="@string/time"
+        android:textColor="#00FF00"
+        android:textSize="80sp" />
+
+</RelativeLayout>

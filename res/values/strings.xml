@@ -7,6 +7,10 @@
     <string name="text_switch">Switch Text</string>
     <string name="image_switch">Switch Image</string>
     <string name="anim_viewgroup">ViewGroup Animation</string>
-    <string name="diaplay">Display</string>
+    <string name="refresh">Refresh</string>
+    <string name="anim_slidshow">Animation Ken Burns effect</string>
+    <string name="view_hacks">View Hacks</string>
+    <string name="time_bg">88:88:88</string>
+    <string name="time">08:32:20</string>
 
 </resources>

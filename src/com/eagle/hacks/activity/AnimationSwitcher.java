@@ -20,18 +20,22 @@ import android.widget.ViewSwitcher.ViewFactory;
 import com.eagle.hacks.R;
 import com.eagle.hacks.Utils;
 
+import java.util.Random;
+
 public class AnimationSwitcher extends BaseActivity {
 
     private TextSwitcher mTextSwitcher;
     private ImageSwitcher mImageSwitcher;
     private Context mContext;
     private int mDrawableId = R.drawable.photo;
+    private Random mRandom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
         setContentView(R.layout.anim_switcher);
+        mRandom = new Random();
         mTextSwitcher = (TextSwitcher) findViewById(R.id.textSwitcher);
         mImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher);
         initTextSwitcher();
@@ -81,7 +85,7 @@ public class AnimationSwitcher extends BaseActivity {
 
     public void onTextSwitch(View view) {
         Utils.logd(TAG, "onTextSwitch");
-        mTextSwitcher.setText("Text ramdon value : " + (int) (Math.random() * 100));
+        mTextSwitcher.setText("Text ramdon value : " + mRandom.nextInt(100));
     }
 
     public void onImageSwitch(View view) {

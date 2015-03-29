@@ -30,6 +30,12 @@
         <activity
             android:name=".activity.AnimationViewGroup"
             android:label="@string/anim_viewgroup" />
+        <activity
+            android:name=".activity.AnimationSlidShow"
+            android:label="@string/anim_slidshow" />
+        <activity
+            android:name=".activity.ViewHacks"
+            android:label="@string/view_hacks"/>
     </application>
 
 </manifest>

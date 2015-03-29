@@ -33,5 +33,11 @@
     <item
         hack:className="com.eagle.hacks.activity.AnimationViewGroup"
         hack:title="@string/anim_viewgroup"/>
+    <item
+        hack:className="com.eagle.hacks.activity.AnimationSlidShow"
+        hack:title="@string/anim_slidshow"/>
+    <item
+        hack:className="com.eagle.hacks.activity.ViewHacks"
+        hack:title="@string/view_hacks"/>
 
 </items>
