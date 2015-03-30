@@ -1,7 +1,6 @@
 
 package com.eagle.hacks.activity;
 
-import android.R.integer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,7 +9,6 @@ import android.text.format.Time;
 import com.eagle.hacks.R;
 import com.eagle.hacks.view.LedTextView;
 
-import java.util.Calendar;
 
 public class ViewHacks extends BaseActivity {
 
