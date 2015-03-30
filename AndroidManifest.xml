@@ -35,7 +35,8 @@
             android:label="@string/anim_slidshow" />
         <activity
             android:name=".activity.ViewHacks"
-            android:label="@string/view_hacks"/>
+            android:label="@string/view_hacks"
+            android:theme="@style/Theme.NoBackground" />
     </application>
 
 </manifest>

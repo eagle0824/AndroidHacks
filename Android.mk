@@ -10,6 +10,8 @@ LOCAL_PACKAGE_NAME := Hacks
 # Builds against the public SDK if add,can't used hide api(include res)
 #LOCAL_SDK_VERSION := current
 
+LOCAL_PROGUARD_FLAG_FILES := proguard.cfg
+
 include $(BUILD_PACKAGE)
 
 # This finds and builds the test apk as well, so a single make does both.
