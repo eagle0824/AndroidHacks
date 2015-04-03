@@ -29,4 +29,128 @@
         <item>"ZZZZZZ"</item>
     </string-array>
 
+    <integer-array name="wether_type_id">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>53</item>
+    </integer-array>
+
+    <string-array name="weather_type">
+        <item>"晴"</item>
+        <item>"多云"</item>
+        <item>"阴"</item>
+        <item>"阵雨"</item>
+        <item>"雷阵雨"</item>
+        <item>"雷阵雨伴有冰雹"</item>
+        <item>"雨夹雪"</item>
+        <item>"小雨"</item>
+        <item>"中雨"</item>
+        <item>"大雨"</item>
+        <item>"暴雨"</item>
+        <item>"大暴雨"</item>
+        <item>"特大暴雨"</item>
+        <item>"阵雪"</item>
+        <item>"小雪"</item>
+        <item>"中雪"</item>
+        <item>"大雪"</item>
+        <item>"暴雪"</item>
+        <item>"雾"</item>
+        <item>"冻雨"</item>
+        <item>"沙尘暴"</item>
+        <item>"小到中雨"</item>
+        <item>"中到大雨"</item>
+        <item>"大到暴雨"</item>
+        <item>"暴雨到大暴雨"</item>
+        <item>"大暴雨到特大暴雨"</item>
+        <item>"小到中雪"</item>
+        <item>"中到大雪"</item>
+        <item>"大到暴雪"</item>
+        <item>"浮尘"</item>
+        <item>"扬沙"</item>
+        <item>"强沙尘暴"</item>
+        <item>"霾"</item>
+    </string-array>
+
+    <integer-array name="wind_direction_id">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+
+    <string-array name="wind_direction">
+        <item>"无持续风向"</item>
+        <item>"东北风"</item>
+        <item>"东风"</item>
+        <item>"东南风"</item>
+        <item>"南风"</item>
+        <item>"西南风"</item>
+        <item>"西风"</item>
+        <item>"西北风"</item>
+        <item>"北风"</item>
+        <item>"旋转风"<item></item></item>
+    </string-array>
+
+    <integer-array name="wind_power_id">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+
+    <string-array name="wind_power">
+        <item>"微风"</item>
+        <item>"3-4级"</item>
+        <item>"4-5级"</item>
+        <item>"5-6级"</item>
+        <item>"6-7级"</item>
+        <item>"7-8级"</item>
+        <item>"8-9级"</item>
+        <item>"9-10级"</item>
+        <item>"10-11级"</item>
+        <item>"11-12级"</item>
+    </string-array>
+
 </resources>

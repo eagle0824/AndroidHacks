@@ -11,9 +11,11 @@ import android.provider.MediaStore.Video;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Xml;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -50,6 +52,9 @@ public class Hack extends Activity implements OnItemClickListener {
         mList.setAdapter(mAdapter);
         mList.setOnItemClickListener(this);
         loadAllItems();
+        WindowManager wm = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Utils.logd(TAG, "display : " + display);
     }
 
     @Override
