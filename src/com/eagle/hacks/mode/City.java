@@ -132,6 +132,7 @@ public class City {
         public static final String KEY_WIND_LEVEL = "wind";
         public static final String KEY_WIND_DIRECTION = "fx";
         public static final String KEY_WIND_POWER = "fl";
+        public static final String KEY_TEMPF = "tempF";
 
         private int index;
         private String temp;
@@ -139,6 +140,7 @@ public class City {
         private String windLevel;
         private String windDirection;
         private String windPower;
+        private String fahrenheit;
 
         public Data(int index) {
             this.index = index;
@@ -184,6 +186,14 @@ public class City {
             this.windPower = windPower;
         }
 
+        public void setFahrenheit(String degree) {
+            fahrenheit = degree;
+        }
+
+        public String getFahrenheit() {
+            return fahrenheit;
+        }
+
         @Override
         public String toString() {
             StringBuilder sb = new StringBuilder();
@@ -193,6 +203,7 @@ public class City {
             sb.append(windLevel).append(" ");
             sb.append(windDirection).append(" ");
             sb.append(windPower).append(" ");
+            sb.append(fahrenheit).append(" ");
             return sb.toString();
         }
     }
