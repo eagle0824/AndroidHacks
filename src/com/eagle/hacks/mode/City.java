@@ -198,8 +198,8 @@ public class City {
         public String toString() {
             StringBuilder sb = new StringBuilder();
             sb.append(index).append(" ");
-            sb.append(temp).append(" ");
             sb.append(weather).append(" ");
+            sb.append(temp).append(" ");
             sb.append(windLevel).append(" ");
             sb.append(windDirection).append(" ");
             sb.append(windPower).append(" ");

@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_STATIC_JAVA_LIBRARIES := libvolley
+LOCAL_STATIC_JAVA_LIBRARIES := libvolley libgoogle-gson
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
@@ -18,7 +18,8 @@ include $(BUILD_PACKAGE)
 
 include $(CLEAR_VARS)
 
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := libvolley:libs/volley.jar
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := libvolley:libs/volley.jar \
+	libgoogle-gson:libs/google-gson.jar
 
 include $(BUILD_MULTI_PREBUILT)
 
