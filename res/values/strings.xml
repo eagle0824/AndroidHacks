@@ -15,5 +15,8 @@
     <string name="roundbackground">Rounded borders for backgrounds</string>
     <string name="volley">Volley</string>
     <string name="update">Update</string>
+    <string name="webview">WebView</string>
+    <string name="go">Go</string>
+    <string name="web_address">Web Address</string>
 
 </resources>

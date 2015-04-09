@@ -42,5 +42,8 @@
     <item
         hack:className="com.eagle.hacks.activity.VolleyActivity"
         hack:title="@string/volley"/>
+    <item
+        hack:className="com.eagle.hacks.activity.WebViewActivity"
+        hack:title="@string/webview"/>
 
 </items>

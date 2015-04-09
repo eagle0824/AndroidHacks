@@ -42,6 +42,9 @@
         <activity
             android:name=".activity.VolleyActivity"
             android:label="@string/volley" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:label="@string/webview" />
     </application>
 
 </manifest>
