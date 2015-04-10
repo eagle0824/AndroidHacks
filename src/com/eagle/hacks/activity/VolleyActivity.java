@@ -20,7 +20,7 @@ import com.eagle.hacks.R;
 import com.eagle.hacks.Utils;
 import com.eagle.hacks.mode.City;
 import com.eagle.hacks.mode.City.Data;
-import com.eagle.hacks.mode.WeatherInfo;
+import com.eagle.hacks.mode.Weather;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
@@ -100,10 +100,7 @@ public class VolleyActivity extends BaseActivity {
                     sb.append("JSONOBJECT : ").append("\n");
                     sb.append(city != null ? city.toString() : " refresh failed!");
                     sb.append("\n");
-                    String json = String.valueOf(msg.obj);
-                    int start = json.indexOf("weatherinfo") + "weatherinfo".length() + 2;
-                    String newJson = json.substring(start, json.lastIndexOf("}"));
-                    WeatherInfo info = mGson.fromJson(newJson, WeatherInfo.class);
+                    Weather info = mGson.fromJson(String.valueOf(msg.obj), Weather.class);
                     sb.append("GSON : ").append("\n");
                     sb.append(info.toString());
                     mDisplay.setText(sb.toString());
