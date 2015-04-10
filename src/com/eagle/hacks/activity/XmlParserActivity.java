@@ -1,11 +1,9 @@
 
 package com.eagle.hacks.activity;
 
-import android.R.integer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.ContactsContract.CommonDataKinds.Note;
 import android.text.TextUtils;
 import android.util.Xml;
 import android.view.View;

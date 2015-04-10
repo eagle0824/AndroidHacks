@@ -8,7 +8,6 @@ import android.content.res.Resources.NotFoundException;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.style.UpdateAppearance;
 import android.util.AttributeSet;
 import android.util.Xml;
 import android.view.Display;
@@ -22,14 +21,12 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-//import com.android.internal.util.XmlUtils;
 import com.eagle.hacks.mode.Item;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-//import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Hack extends Activity implements OnItemClickListener {
@@ -125,105 +122,38 @@ public class Hack extends Activity implements OnItemClickListener {
         }
     }
 
-//    public void loadAllItems() {
-//        try {
-//            XmlPullParser parser = getResources().getXml(R.xml.item_infos);
-//            AttributeSet attrs = Xml.asAttributeSet(parser);
-//            XmlUtils.beginDocument(parser, Utils.TAG_ITEMS);
-//            final int depth = parser.getDepth();
-//            int type;
-//            while (((type = parser.next()) != XmlPullParser.END_TAG || parser
-//                    .getDepth() > depth) && type != XmlPullParser.END_DOCUMENT) {
-//                if (type != XmlPullParser.START_TAG) {
-//                    continue;
-//                }
-//                final String name = parser.getName();
-//                TypedArray a = obtainStyledAttributes(attrs, R.styleable.Item);
-//                if (Utils.TAG_ITEM.equals(name)) {
-//                    String packageName = a
-//                            .getString(R.styleable.Item_packageName);
-//                    String className = a
-//                            .getString(R.styleable.Item_className);
-//                    boolean enabled = a.getBoolean(R.styleable.Item_enabled, true);
-//                    CharSequence title = a.getString(R.styleable.Item_title);
-//                    if (enabled) {
-//                        Item item = new Item.Buidler(className).setPackageName(packageName)
-//                                .setTitle(title.toString()).build();
-//                        //Utils.logd(TAG, item.toString());
-//                        mAdapter.addItem(item);
-//                    }
-//                }
-//                a.recycle();
-//            }
-//            mAdapter.notifyDataSetChanged();
-//        } catch (NotFoundException e) {
-//            e.printStackTrace();
-//        } catch (XmlPullParserException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    private String getStringByName(String name){
-        if(name.startsWith("@")){
-            return mContext.getResources().getString(Integer.valueOf(name.replace("@", "")));
-        } else {
-            return name;
-        }
-    }
-
     public void loadAllItems() {
         try {
             XmlPullParser parser = getResources().getXml(R.xml.item_infos);
-            int eventType = parser.getEventType();
-            String className = null;
-            String packageName = null;
-            String title = null;
-            boolean enabled = true;
-            while (eventType != XmlPullParser.END_DOCUMENT) {
-                switch (eventType) {
-                    case XmlPullParser.START_DOCUMENT:
-                        break;
-                    case XmlPullParser.START_TAG:
-                        if (parser.getName().equals(Utils.TAG_ITEM)) {
-                            int count = parser.getAttributeCount();
-                            String attrName = "";
-                            for (int i = 0; i < count; i++) {
-                                attrName = parser.getAttributeName(i);
-                                if (attrName.equals(Utils.ITEM_ATTR_CLASS)) {
-                                    className = parser.getAttributeValue(i);
-                                } else if (attrName.equals(Utils.ITEM_ATTR_PACKAGE)) {
-                                    packageName = parser.getAttributeValue(i);
-                                } else if (attrName.equals(Utils.ITEM_ATTR_TITLE)) {
-                                    title = parser.getAttributeValue(i);
-                                    title = getStringByName(title);
-                                } else if (attrName.equals(Utils.ITEM_ATTR_ENABLED)) {
-                                    enabled = Boolean.valueOf(parser.getAttributeValue(i));
-                                }
-                            }
-                        }
-                        break;
-                    case XmlPullParser.END_TAG:
-                        if (parser.getName().equals(Utils.TAG_ITEM)) {
-                            if (!TextUtils.isEmpty(className) && enabled) {
-                                if (enabled) {
-                                    Item item = new Item.Buidler(className).setPackageName(packageName)
-                                            .setTitle(title.toString()).build();
-                                    //Utils.logd(TAG, item.toString());
-                                    mAdapter.addItem(item);
-                                }
-                            }
-                            className = null;
-                            packageName = null;
-                            title = null;
-                            enabled = true;
-                        }
-                        break;
+            AttributeSet attrs = Xml.asAttributeSet(parser);
+            final int depth = parser.getDepth();
+            int type;
+            while (((type = parser.next()) != XmlPullParser.END_TAG || parser
+                    .getDepth() > depth) && type != XmlPullParser.END_DOCUMENT) {
+                if (type != XmlPullParser.START_TAG) {
+                    continue;
                 }
-                eventType = parser.next();
+                final String name = parser.getName();
+                TypedArray a = obtainStyledAttributes(attrs, R.styleable.Item);
+                if (Utils.TAG_ITEM.equals(name)) {
+                    String packageName = a
+                            .getString(R.styleable.Item_packageName);
+                    String className = a
+                            .getString(R.styleable.Item_className);
+                    boolean enabled = a.getBoolean(R.styleable.Item_enabled, true);
+                    CharSequence title = a.getString(R.styleable.Item_title);
+                    if (enabled) {
+                        Item item = new Item.Buidler(className).setPackageName(packageName)
+                                .setTitle(title.toString()).build();
+                        //Utils.logd(TAG, item.toString());
+                        mAdapter.addItem(item);
+                    }
+                }
+                a.recycle();
             }
             mAdapter.notifyDataSetChanged();
+        } catch (NotFoundException e) {
+            e.printStackTrace();
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -1,7 +1,6 @@
 
 package com.eagle.hacks.activity;
 
-import android.R.integer;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
