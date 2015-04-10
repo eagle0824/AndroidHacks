@@ -1,53 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2007 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
 <items xmlns:hack="http://schemas.android.com/apk/res/com.eagle.hacks" >
-
-    <!--
-        <item
-        hack:enabled="true"
-        hack:className="com.eagle.hacks.examples"
-        hack:packageName="com.eagle.hacks"
-        hack:title="@string/title" />
-    -->
 
     <item
         hack:className="com.eagle.hacks.activity.CustomViewGroup"
         hack:title="@string/custom_group_view"/>
+
     <item
         hack:className="com.eagle.hacks.activity.AnimationSwitcher"
         hack:title="@string/text_image_switcher"/>
+
     <item
         hack:className="com.eagle.hacks.activity.AnimationViewGroup"
         hack:title="@string/anim_viewgroup"/>
+
     <item
         hack:className="com.eagle.hacks.activity.AnimationSlidShow"
         hack:title="@string/anim_slidshow"/>
+
     <item
         hack:className="com.eagle.hacks.activity.ViewHacks"
         hack:title="@string/view_hacks"/>
+
     <item
         hack:className="com.eagle.hacks.activity.VolleyActivity"
         hack:title="@string/volley"/>
+
     <item
         hack:className="com.eagle.hacks.activity.WebViewActivity"
         hack:title="@string/webview"/>
+
     <item
         hack:className="com.eagle.hacks.activity.XmlParserActivity"
         hack:title="@string/xml_parser"/>
-
 
 </items>

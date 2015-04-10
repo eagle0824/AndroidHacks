@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -45,6 +45,10 @@
         <activity
             android:name=".activity.WebViewActivity"
             android:label="@string/webview" />
+        <activity
+            android:name=".activity.XmlParserActivity"
+            android:label="@string/xml_parser" />
+
     </application>
 
 </manifest>

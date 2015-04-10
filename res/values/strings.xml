@@ -18,5 +18,9 @@
     <string name="webview">WebView</string>
     <string name="go">Go</string>
     <string name="web_address">Web Address</string>
+    <string name="sax">SAX</string>
+    <string name="dom">DOM</string>
+    <string name="pull">PULL</string>
+    <string name="xml_parser">Xml Parser</string>
 
 </resources>

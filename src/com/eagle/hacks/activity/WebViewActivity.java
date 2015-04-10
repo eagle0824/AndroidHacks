@@ -13,16 +13,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
 import com.eagle.hacks.R;
 import com.eagle.hacks.Utils;
 
 public class WebViewActivity extends BaseActivity {
 
     private static final String TAG = WebViewActivity.class.getSimpleName();
-    private Context mContext;
-    private RequestQueue mRequestQueue;
 
     private WebView mWebContent;
     private EditText mWeb;
@@ -31,10 +27,8 @@ public class WebViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.webview);
-        mContext = this;
         mWebContent = (WebView) findViewById(R.id.web_content);
         mWeb = (EditText) findViewById(R.id.web);
-        mRequestQueue = Volley.newRequestQueue(mContext);
         WebSettings settings = mWebContent.getSettings();
         settings.setSupportZoom(true); // 支持缩放
         settings.setBuiltInZoomControls(true); // 启用内置缩放装置
@@ -64,7 +58,6 @@ public class WebViewActivity extends BaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        // mRequestQueue.cancelAll(this);
     }
 
     @Override
@@ -86,7 +79,6 @@ public class WebViewActivity extends BaseActivity {
     }
 
     private static final int EVENT_GO = 1;
-    private static final int EVENT_UPDATE_CONTENT = 2;
     private Handler mHandler = new Handler() {
 
         @Override
@@ -111,10 +103,6 @@ public class WebViewActivity extends BaseActivity {
                      * Utils.logd(TAG, "onErrorResponse : " + arg0); } }));
                      */
                     break;
-                case EVENT_UPDATE_CONTENT:
-
-                    break;
-
                 default:
                     break;
             }

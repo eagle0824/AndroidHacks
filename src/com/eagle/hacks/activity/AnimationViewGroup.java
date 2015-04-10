@@ -26,7 +26,7 @@ public class AnimationViewGroup extends BaseActivity {
         setContentView(R.layout.anim_viewgroup);
         mList = (ListView) findViewById(R.id.list);
         dataStrings = getResources().getStringArray(R.array.datas);
-        mAdapter = new ArrayAdapter<String>(this, com.android.internal.R.layout.simple_list_item_1,
+        mAdapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1,
                 dataStrings);
         initListDatas();
     }
